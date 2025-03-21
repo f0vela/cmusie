@@ -30,6 +30,13 @@ async def svg2png(infile, outfile, size=512, padding=0.1, color='#333333'):
 
 async def main():
     size = 16
+    # Generate menu bar icon first
+    svgpath = path('menubar-solid.svg')
+    print('rendering: menubar icon')
+    await svg2png(svgpath, 'menubar-16.png', size=size, color='#000000')
+    await svg2png(svgpath, 'menubar-16@2x.png', size=size * 2, color='#000000')
+
+    # Generate other icons
     for icon in sorted(['unlock', 'link', 'unlink', 'power-off',
                         'play', 'pause', 'backward', 'forward']):
         svgpath = path(icon + '-solid.svg')

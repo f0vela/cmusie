@@ -26,7 +26,9 @@
     [menu addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
     
     NSStatusItem *item = [[NSStatusBar systemStatusBar] statusItemWithLength:NSSquareStatusItemLength];
-    item.button.image = [NSImage imageNamed:@"AppIcon"];
+    NSImage *icon = [NSImage imageNamed:@"MenuBarIcon"];
+    [icon setTemplate:YES];  // This makes the icon automatically adapt to light/dark mode
+    item.button.image = icon;
     item.button.imageScaling = NSImageScaleProportionallyUpOrDown;
     
     self.statusItem = item;

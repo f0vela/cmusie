@@ -59,6 +59,126 @@
       "idiom" : "mac",
       "filename" : "icon512@2x.png",
       "scale" : "2x"
+    },
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "icon16-white.png",
+      "scale" : "1x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "16x16",
+      "idiom" : "mac",
+      "filename" : "icon16-white@2x.png",
+      "scale" : "2x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "icon32-white.png",
+      "scale" : "1x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "32x32",
+      "idiom" : "mac",
+      "filename" : "icon32-white@2x.png",
+      "scale" : "2x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "icon128-white.png",
+      "scale" : "1x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "128x128",
+      "idiom" : "mac",
+      "filename" : "icon128-white@2x.png",
+      "scale" : "2x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "icon256-white.png",
+      "scale" : "1x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "256x256",
+      "idiom" : "mac",
+      "filename" : "icon256-white@2x.png",
+      "scale" : "2x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "icon512-white.png",
+      "scale" : "1x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
+    },
+    {
+      "size" : "512x512",
+      "idiom" : "mac",
+      "filename" : "icon512-white@2x.png",
+      "scale" : "2x",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
     }
   ],
   "info" : {
