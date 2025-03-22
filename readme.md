@@ -4,7 +4,8 @@ control cmus playback on macos using the ui and/or media keys.
 
 ![preview](https://raw.githubusercontent.com/f0vela/cmusie/master/assets/preview_new.jpg)
 
-[download](https://github.com/nkanaev/cmusie/releases/latest)
+[original project](https://github.com/nkanaev/cmusie/)
+[original project download](https://github.com/nkanaev/cmusie/releases/latest)
 
 # usage
 
