@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="23504" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23504"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NVPopoverController">
             <connections>
+                <outlet property="albumArtView" destination="aG8-K1-bIS" id="iIw-HY-JVx"/>
                 <outlet property="btnLock" destination="nU2-sf-hIw" id="aR9-Gh-OhX"/>
                 <outlet property="btnNext" destination="bHr-JZ-rVa" id="ub3-eb-9fc"/>
                 <outlet property="btnPlay" destination="dWd-bf-Epr" id="rvP-Cr-qSk"/>
@@ -24,8 +25,8 @@
             <rect key="frame" x="0.0" y="0.0" width="252" height="81"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5p-N9-uxo">
-                    <rect key="frame" x="7" y="54" width="238" height="17"/>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L5p-N9-uxo">
+                    <rect key="frame" x="7" y="54" width="191" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" alignment="left" title="..." id="xwz-fb-t4C">
                         <font key="font" metaFont="system"/>
@@ -33,8 +34,8 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1UF-xU-x3G">
-                    <rect key="frame" x="7" y="35" width="238" height="17"/>
+                <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1UF-xU-x3G">
+                    <rect key="frame" x="7" y="35" width="191" height="17"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <textFieldCell key="cell" lineBreakMode="truncatingTail" title="..." id="uc8-95-fuM">
                         <font key="font" metaFont="system"/>
@@ -97,6 +98,11 @@
                         <action selector="handlePlayToggle:" target="-2" id="Fx1-xh-V9w"/>
                     </connections>
                 </button>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aG8-K1-bIS">
+                    <rect key="frame" x="204" y="33" width="48" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="wCo-hr-KfL"/>
+                </imageView>
             </subviews>
             <point key="canvasLocation" x="37" y="56.5"/>
         </customView>

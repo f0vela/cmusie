@@ -64,6 +64,7 @@
 - (NSDictionary*)playerStatus {
     NSMutableDictionary *tag = [[NSMutableDictionary alloc] init];
     BOOL running = NO, playing = NO;
+    NSString *filePath = nil;
     
     NSTask *task = [self runCommand:@[@"cmus-remote", @"-Q"]];
     if (task.terminationStatus == 0) {
@@ -74,20 +75,28 @@
 
         NSArray *lines = [outputString componentsSeparatedByString:@"\n"];
         for (NSString *line in lines) {
+            if (line.length == 0) continue;
+            
             NSArray *chunks = [line componentsSeparatedByString:@" "];
+            if (chunks.count < 2) continue;
+            
             if ([chunks[0] isEqualToString:@"status"]) {
                 playing = [chunks[1] isEqualToString:@"playing"];
             } else if ([chunks[0] isEqualToString:@"tag"]) {
                 NSArray *valueChunks = [chunks subarrayWithRange:NSMakeRange(2, chunks.count - 2)];
                 NSString *value = [valueChunks componentsJoinedByString:@" "];
                 [tag setValue:value forKey:chunks[1]];
+            } else if ([chunks[0] isEqualToString:@"file"]) {
+                NSArray *valueChunks = [chunks subarrayWithRange:NSMakeRange(1, chunks.count - 1)];
+                filePath = [valueChunks componentsJoinedByString:@" "];
             }
         }
     }
     return @{
         @"tag": tag,
         @"running": [NSNumber numberWithBool:running],
-        @"playing": [NSNumber numberWithBool:playing]
+        @"playing": [NSNumber numberWithBool:playing],
+        @"file": filePath ?: @""
     };
 }
 

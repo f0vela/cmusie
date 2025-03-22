@@ -40,6 +40,26 @@
     self.fieldTitle.stringValue = [(NSDictionary*)status[@"tag"] valueForKey:@"title"] ?: @"...";
     self.fieldArtist.stringValue = [(NSDictionary*)status[@"tag"] valueForKey:@"artist"] ?: @"...";
     
+    // Update album artwork
+    NSString *filePath = status[@"file"];
+    if (filePath.length > 0) {
+        NSString *directory = [filePath stringByDeletingLastPathComponent];
+        NSArray *artworkFiles = @[@"cover.jpg", @"cover.png", @"folder.jpg", @"folder.png", @"album.jpg", @"album.png"];
+        
+        NSImage *artwork = nil;
+        for (NSString *artFile in artworkFiles) {
+            NSString *artPath = [directory stringByAppendingPathComponent:artFile];
+            if ([[NSFileManager defaultManager] fileExistsAtPath:artPath]) {
+                artwork = [[NSImage alloc] initWithContentsOfFile:artPath];
+                if (artwork) break;
+            }
+        }
+        
+        self.albumArtView.image = artwork ?: [NSImage imageNamed:@"NSImageNameApplicationIcon"];
+    } else {
+        self.albumArtView.image = [NSImage imageNamed:@"NSImageNameApplicationIcon"];
+    }
+    
     switch ([[self delegate] mediaKeysStatus]) {
         case MediaKeyStatusUnaccessible:
             [self.btnLock setImage:[NSImage imageNamed:@"unlock"]];

@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak) IBOutlet NSButton *btnNext;
 @property (weak) IBOutlet NSButton *btnPlay;
 @property (weak) IBOutlet NSButton *btnLock;
+@property (weak) IBOutlet NSImageView *albumArtView;
 
 @end
 
